@@ -927,5 +927,22 @@ margin-right: 10px;
   padding-left: 8px;
 }
 
+/* ADD MEDIA FILES OC C: */
+@media only scren and (min-width: 640px) {
+   
+  .front-page-my-name {
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 0;
+  }
+  .front-page-profession {
+    margin-top: 20px;
+    font-size: 55px;
+    line-height: 66px;
+    
+  }
+
+}
+
 
 
