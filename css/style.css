@@ -342,7 +342,7 @@ body {
 
 /* FRONT PAGE */
 .front-page {
-  width: 320px;
+  width: 100%;
   background: var(--c-dark);
   padding: 30px 10px 55px 10px;
   box-sizing: border-box;
@@ -928,19 +928,36 @@ margin-right: 10px;
 }
 
 /* ADD MEDIA FILES OC C: */
-@media only scren and (min-width: 640px) {
-   
+@media only screen and (min-width: 640px) {
+  /*
+  .navigation {
+    background: red;
+  }
+  */ 
   .front-page-my-name {
     font-size: 36px;
     line-height: 43px;
     margin-bottom: 0;
   }
   .front-page-profession {
-    margin-top: 20px;
+    
+    margin: 20px 0 30px 0;
     font-size: 55px;
     line-height: 66px;
-    
   }
+  .profession-part-1 {
+    margin-right: 40px;
+  }
+  .profession-part-2 {
+    margin-left: 40px;
+  }
+  .front-page-description {
+    font-size: 17px;
+    line-height: 150%;
+    width: 385px;
+    margin: 0 0 40px 0;
+  }
+
 
 }
 
