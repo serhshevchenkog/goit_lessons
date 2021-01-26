@@ -5,7 +5,6 @@ const userName = document.querySelector('#callback-form-input-name');
 const userEmail = document.querySelector('#callback-form-input-email');
 const userPhone = document.querySelector('#callback-form-input-phone');
 
-
 userPhone.addEventListener('click', function() {
     if (!userPhone.value.trim()) {
         userPhone.value = '+380';
@@ -18,51 +17,44 @@ userPhone.addEventListener('blur', function() {
     }
 });
 
-
 callbackForm.addEventListener('submit', function(event){
     event.preventDefault();
     let hasError = false;
 
-    console.log(userName.value);
-    console.log(userEmail.value);
-    console.log(userPhone.value);
-
-    if (!userName.value.trim()){
+    if (!userName.value.trim()) {
         userName.classList.add('callback-form-input-error');
         hasError = true;
     } else {
         userName.classList.remove('callback-form-input-error');
     }
 
-    if (!userEmail.value.trim() || !isEmailValid(userEmail.value)){
+    if (!userEmail.value.trim() || !isEmailValid(userEmail.value)) {
         userEmail.classList.add('callback-form-input-error');
         hasError = true;
     } else {
         userEmail.classList.remove('callback-form-input-error');
     }
 
-    if (!userPhone.value.trim() || !isPhoneValid(userPhone.value)){
+    if (!userPhone.value.trim() || !isPhoneValid(userPhone.value)) {
         userPhone.classList.add('callback-form-input-error');
         hasError = true;
-        
     } else {
         userPhone.classList.remove('callback-form-input-error');
     }
 
     if (hasError) {
         return;
-        
     }
 
     userName.value = '';
     userEmail.value = '';
     userPhone.value = '';
-    
+
     requestReceivedModal.classList.add('modal-active');
-    
+
     setTimeout(function() {
         requestReceivedModal.classList.remove('modal-active');
-    }, 1000);  
+    }, 2000);
 });
 
 function isPhoneValid(phone = '') {
@@ -75,4 +67,3 @@ function isEmailValid(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email.toLowerCase());
 }
-
