@@ -78,6 +78,14 @@ body {
 
 /* COMMON */
 
+.tablet-element{
+  display: none;
+}
+
+.desktop-element{
+  display: none;
+}
+
 .accent-btn {
   background: var(--c-accent);
   font-weight: bold;
@@ -925,4 +933,73 @@ body {
   border-left: none;
   margin: 0;
   padding-left: 8px;
+}
+
+@media only screen and (min-width: 640px) {
+   /*.navigation {
+    background: red;
+  } */ 
+  .container {
+    padding-bottom: 70px;
+    min-width: 640;
+  }
+
+  .mobile-element{
+    display: none;
+  }
+  
+  .tablet-element{
+    display: block;
+  }
+  
+
+  .front-page-my-name {
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 0;
+  }
+  .front-page-profession {
+    margin: 20px 0 30px 0;
+    font-size: 55px;
+    line-height: 66px;
+  }
+
+  .profession-part-1 {
+    margin-right: 40px;
+  }
+
+  .profession-part-2 {
+    margin-left: 40px;
+  }
+  .front-page-description {
+    font-size: 17px;
+    line-height: 150%;
+    width: 385px;
+    margin: 0 0 40px 0;
+  }
+
+  .front-page-my-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .front-page-my-photo {
+    width: 140px;
+    margin-right: 35px;
+    margin-bottom: 0;
+  }
+
+  .front-page-my-decr {
+    text-align: left;
+  }
+  .front-page-my-video-btn {
+    margin-bottom: 0;
+  }
+
+  .front-page-laptop {
+    width: 400px;
+    margin-bottom: 90px;
+  }
+  
 }
